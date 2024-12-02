@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  travel-chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
